@@ -18,16 +18,14 @@ import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import retrofit.Call;
-import retrofit.Callback;
-import retrofit.GsonConverterFactory;
-import retrofit.Response;
-import retrofit.Retrofit;
 
 public class MainActivity extends AppCompatActivity {
 
     @Inject
     Bus bus;
+
+    @Inject
+    HueService service;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         HueApplication.from(this).getComponent().inject(this);
 
-        Intent intent = new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
+        // Intent intent = new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
         //startActivity(intent);
 
     }
@@ -58,6 +56,6 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.button)
     public void onClick() {
-        http://inthecheesefactory.com/blog/retrofit-2.0/en
+
     }
 }

@@ -8,6 +8,7 @@ public class BridgeEndpoint implements BaseUrl {
 
     @Override
     public HttpUrl url() {
-        return null;
+        // TODO uPNP
+        return HttpUrl.parse("http://192.168.1.30/");
     }
 }
